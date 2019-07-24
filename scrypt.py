@@ -6,8 +6,13 @@ app = Flask(__name__)
 #Connexion à la base de données 
 def connexionDB():
     try:
-        DATABASE_URL = os.environ['DATABASE_URL']
-        connexion = psy.connect(DATABASE_URL, sslmode='require')
+        #DATABASE_URL = os.environ['DATABASE_URL']
+        serveur = "ec2-174-129-227-128.compute-1.amazonaws.com"
+        bd = "def6p9u6t0o45m"
+        userBD = "zdfyfzhzxntvpi"
+        mdp = "e691227410d4268e9699a16c8d2b80b902994a58c189d01f7226f6ef75b478e7"
+        port ="5432"
+        connexion = psy.connect((host=serveur, database=bd, user=userBD, password=mdp, port=port)
         print('ok')
         return connexion
     except psy.OperationalError:
