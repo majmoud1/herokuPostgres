@@ -12,7 +12,7 @@ def connexionDB():
         userBD = "zdfyfzhzxntvpi"
         mdp = "e691227410d4268e9699a16c8d2b80b902994a58c189d01f7226f6ef75b478e7"
         port ="5432"
-        connexion = psy.connect((host=serveur, database=bd, user=userBD, password=mdp, port=port)
+        connexion = psy.connect(host=serveur, database=bd, user=userBD, password=mdp, port=port)
         print('ok')
         return connexion
     except psy.OperationalError:
