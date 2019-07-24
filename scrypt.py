@@ -15,11 +15,11 @@ def connexionDB():
 
 @app.route('/')
 def index():
-    render_template('index.html')
+    return render_template('index.html')
 
 @app.route("/apprenant/inscription")
 def inscriptionApprenant():
-    render_template('scolarite/inscription.html', referentiels=findAllReferentiel())
+    return render_template('scolarite/inscription.html', referentiels=findAllReferentiel())
 
 def createTable():
     connexion = connexionDB()
