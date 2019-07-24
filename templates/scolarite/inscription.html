@@ -20,11 +20,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
                 {% for referentiel in referentiels %}
                     <tr>
-                    <td>referentiel.0</td>
-                    <td>@referentiel.1</td>
+                        <td>{{ referentiel.0 }}</td>
+                        <td>{{ referentiel.1 }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
